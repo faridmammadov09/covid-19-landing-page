@@ -25,6 +25,7 @@ html {
  * Basic styles for links
  */
 a {
+  display: inline-block;
   color: $primary-color;
   text-decoration: none;
   font-size: 1.125rem;
@@ -47,22 +48,42 @@ h3 {
 
 h1,
 h2 {
-  font-size: 3.125rem;
   text-transform: capitalize;
   line-height: 139%;
-  margin-bottom: 29px;
   div {
-    font-size: 1.8125rem;
     color: $primary-color;
   }
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-transform: capitalize;
   line-height: 190%;
+
+  @include breakpoint(medium) {
+    font-size: 1.25rem;
+  }
 }
 
 section {
-  padding: 200px 0;
+  padding: 180px 0;
+
+  @include breakpoint(medium) {
+    padding: 100px 0 200px;
+  }
+}
+
+.white-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
+
+  &.active {
+    display: block;
+  }
 }

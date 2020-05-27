@@ -366,6 +366,7 @@ html {
  * Basic styles for links
  */
 a {
+  display: inline-block;
   color: #fb4c47;
   text-decoration: none;
   font-size: 1.125rem;
@@ -384,26 +385,50 @@ h3 {
 
 h1,
 h2 {
-  font-size: 3.125rem;
   text-transform: capitalize;
   line-height: 139%;
-  margin-bottom: 29px;
 }
 
 h1 div,
 h2 div {
-  font-size: 1.8125rem;
   color: #fb4c47;
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-transform: capitalize;
   line-height: 190%;
 }
 
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 1.25rem;
+  }
+}
+
 section {
-  padding: 200px 0;
+  padding: 180px 0;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    padding: 100px 0 200px;
+  }
+}
+
+.white-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.white-overlay.active {
+  display: block;
 }
 
 @font-face {
@@ -475,7 +500,7 @@ body {
  */
 .clearfix::after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -487,17 +512,18 @@ body {
  */
 .container {
   max-width: 1180px;
-  /* 1 */
   margin-left: auto;
-  /* 2 */
   margin-right: auto;
-  /* 2 */
-  padding-left: 20px;
-  /* 3 */
-  padding-right: 20px;
-  /* 3 */
+  padding-left: 10px;
+  padding-right: 10px;
   width: 100%;
-  /* 1 */
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /**
@@ -530,47 +556,150 @@ body {
 }
 
 .header {
+  padding-top: 100px;
   background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#fff8f8));
   background: linear-gradient(0deg, #fff, #fff8f8);
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 150px;
+  }
+}
+
 .header .nav {
+  padding: 10px;
+  background-color: #fff8f8;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 130px;
+  height: 80px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 5;
+}
+
+@media screen and (min-width: 768px) {
+  .header .nav {
+    height: 130px;
+    padding: 20px;
+  }
+}
+
+.header .nav .logo-wrapper {
+  min-width: 120px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+@media screen and (min-width: 768px) {
+  .header .nav .logo-wrapper {
+    width: initial;
+    margin-right: 20px;
+  }
+}
+
+.header .nav .logo-wrapper img {
+  width: 100%;
 }
 
 .header .nav .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.header .nav .menu.small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .header .nav .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: static;
+    background: transparent;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: initial;
+  }
 }
 
 .header .nav .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  width: 80%;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header .nav .menu__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .header .nav .menu__item {
-  margin-right: 50px;
+  margin-right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .header .nav .menu__item {
+    margin-right: 50px;
+  }
 }
 
 .header .nav .menu__link {
-  font-size: 1.125rem;
+  font-size: 2rem;
   color: #035755;
   -webkit-transition: color 200ms ease;
   transition: color 200ms ease;
+}
+
+@media screen and (min-width: 768px) {
+  .header .nav .menu__link {
+    font-size: 1.125rem;
+  }
 }
 
 .header .nav .menu__link:hover {
@@ -581,22 +710,74 @@ body {
   color: #fb4c47;
 }
 
+.header .nav .menu .btn-contact {
+  width: 60%;
+}
+
+@media screen and (min-width: 768px) {
+  .header .nav .menu .btn-contact {
+    width: initial;
+  }
+}
+
+.header .nav .hamburger-menu {
+  padding: 10px;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.header .nav .hamburger-menu img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .header .nav .hamburger-menu {
+    display: none;
+  }
+}
+
 .header .banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .header .banner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .header .banner__content {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .header .banner__content {
+    margin-bottom: 0;
+  }
 }
 
 .header .banner__image {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  position: relative;
 }
 
 .header .banner__image img {
@@ -604,12 +785,23 @@ body {
 }
 
 .header .banner__title {
-  font-size: 2rem;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .header .banner__title {
+    font-size: 2rem;
+  }
 }
 
 .header .banner p {
-  font-size: 1.5rem;
-  margin-bottom: 54px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .header .banner p {
+    margin-bottom: 54px;
+  }
 }
 
 .header .banner__btn-cta {
@@ -632,15 +824,35 @@ body {
   background-image: url("/images/about-us-bg.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
+  background-size: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us {
+    background-size: initial;
+  }
 }
 
 .about-us .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .about-us__image {
@@ -657,12 +869,38 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding-left: 20px;
+}
+
+.about-us__title {
+  font-size: 1.625rem;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us__title {
+    font-size: 3.125rem;
+  }
+}
+
+.about-us__title div {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us__title div {
+    font-size: 1.8125rem;
+  }
 }
 
 .about-us__text {
   line-height: 215%;
-  margin-top: 18px;
-  margin-bottom: 56px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us__text {
+    margin-top: 18px;
+    margin-bottom: 56px;
+  }
 }
 
 .about-us__btn {
@@ -677,10 +915,11 @@ body {
 }
 
 .btn {
-  display: inline-block;
+  display: block;
   padding: 0.8rem 2.76rem;
   border-radius: 1000px;
   font-weight: bold;
+  text-align: center;
 }
 
 .btn--outline {
@@ -700,6 +939,18 @@ body {
 
 .btn--xl {
   font-size: 1.5rem;
-  padding: 1.6875rem 4.3rem;
+  padding: 1rem 4.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .btn--xl {
+    padding: 1.6875rem 4.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    display: inline-block;
+  }
 }
 /*# sourceMappingURL=main.css.map */

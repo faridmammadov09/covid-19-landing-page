@@ -32,3 +32,11 @@
   }
 }
 
+// Breakpoint mixin
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}

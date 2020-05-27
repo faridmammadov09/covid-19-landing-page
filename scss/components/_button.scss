@@ -5,10 +5,11 @@
 .btn {
   //   height: 55px;
   //   width: 154px;
-  display: inline-block;
+  display: block;
   padding: 0.8rem 2.76rem;
   border-radius: 1000px;
   font-weight: bold;
+  text-align: center;
 
   &--outline {
     border: 2px solid $primary-color;
@@ -26,6 +27,14 @@
 
   &--xl {
     font-size: 1.5rem;
-    padding: 1.6875rem 4.3rem;
+    padding: 1rem 4.3rem;
+
+    @include breakpoint(medium) {
+      padding: 1.6875rem 4.3rem;
+    }
+  }
+
+  @include breakpoint(medium) {
+    display: inline-block;
   }
 }
