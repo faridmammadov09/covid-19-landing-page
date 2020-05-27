@@ -31,6 +31,8 @@
     .logo-wrapper {
       min-width: 120px;
       width: min-content;
+      z-index: 10;
+      flex-shrink: 0;
 
       @include breakpoint(medium) {
         width: initial;
@@ -108,11 +110,6 @@
       }
 
       .btn-contact {
-        width: 60%;
-
-        @include breakpoint(medium) {
-          width: initial;
-        }
       }
     }
 
@@ -122,6 +119,7 @@
       width: 45px;
       cursor: pointer;
       z-index: 20;
+      flex-shrink: 0;
 
       img {
         width: 100%;
@@ -145,9 +143,11 @@
     &__content {
       flex: 1;
       margin-bottom: 50px;
+      order: 2;
 
       @include breakpoint(medium) {
         margin-bottom: 0;
+        order: initial;
       }
     }
 

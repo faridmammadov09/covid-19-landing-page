@@ -42,12 +42,12 @@ ul {
 h1,
 h2,
 h3 {
-  font-family: $heading-font-stack;
   color: $secondary-color;
 }
 
 h1,
 h2 {
+  font-family: $heading-font-stack;
   text-transform: capitalize;
   line-height: 139%;
   div {
@@ -70,6 +70,28 @@ section {
 
   @include breakpoint(medium) {
     padding: 100px 0 200px;
+  }
+
+  .section-header {
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 3.125rem;
+    line-height: 119%;
+    margin-bottom: 31px;
+
+    div {
+      font-size: 1.8125rem;
+      line-height: 124%;
+    }
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    line-height: 215%;
+    max-width: 570px;
+    margin: 0 auto;
   }
 }
 

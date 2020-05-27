@@ -379,12 +379,12 @@ ul {
 h1,
 h2,
 h3 {
-  font-family: "Red Hat Display", sans-serif;
   color: #035755;
 }
 
 h1,
 h2 {
+  font-family: "Red Hat Display", sans-serif;
   text-transform: capitalize;
   line-height: 139%;
 }
@@ -414,6 +414,28 @@ section {
   section {
     padding: 100px 0 200px;
   }
+}
+
+section .section-header {
+  text-align: center;
+}
+
+section .section-title {
+  font-size: 3.125rem;
+  line-height: 119%;
+  margin-bottom: 31px;
+}
+
+section .section-title div {
+  font-size: 1.8125rem;
+  line-height: 124%;
+}
+
+section .section-subtitle {
+  font-size: 1.125rem;
+  line-height: 215%;
+  max-width: 570px;
+  margin: 0 auto;
 }
 
 .white-overlay {
@@ -599,6 +621,9 @@ body {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  z-index: 10;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -710,22 +735,14 @@ body {
   color: #fb4c47;
 }
 
-.header .nav .menu .btn-contact {
-  width: 60%;
-}
-
-@media screen and (min-width: 768px) {
-  .header .nav .menu .btn-contact {
-    width: initial;
-  }
-}
-
 .header .nav .hamburger-menu {
   padding: 10px;
   height: 45px;
   width: 45px;
   cursor: pointer;
   z-index: 20;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .header .nav .hamburger-menu img {
@@ -765,11 +782,17 @@ body {
       -ms-flex: 1;
           flex: 1;
   margin-bottom: 50px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 @media screen and (min-width: 768px) {
   .header .banner__content {
     margin-bottom: 0;
+    -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+            order: initial;
   }
 }
 
@@ -869,7 +892,12 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding-left: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us__content {
+    padding-left: 20px;
+  }
 }
 
 .about-us__title {
@@ -912,6 +940,108 @@ body {
 
 .about-us__btn:hover {
   border: 2px solid #fb4c47;
+}
+
+.contagion__header {
+  margin-bottom: 111px;
+}
+
+.contagion__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 992px) {
+  .contagion__cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.contagion__cards .card {
+  padding: 25px;
+  height: 575px;
+  max-width: 460px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 35px 87px rgba(0, 0, 0, 0.11);
+          box-shadow: 0 35px 87px rgba(0, 0, 0, 0.11);
+  text-align: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 200ms ease;
+  transition: -webkit-box-shadow 200ms ease;
+  transition: box-shadow 200ms ease;
+  transition: box-shadow 200ms ease, -webkit-box-shadow 200ms ease;
+}
+
+.contagion__cards .card:hover {
+  -webkit-box-shadow: 0 35px 87px rgba(0, 0, 0, 0.21);
+          box-shadow: 0 35px 87px rgba(0, 0, 0, 0.21);
+}
+
+.contagion__cards .card--active {
+  border-bottom: 6px solid #fb4c47;
+}
+
+@media screen and (min-width: 768px) {
+  .contagion__cards .card {
+    margin-bottom: 0;
+  }
+  .contagion__cards .card:not(:last-child) {
+    margin-right: 31px;
+  }
+}
+
+.contagion__cards .card__image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.contagion__cards .card__image img {
+  width: 100%;
+}
+
+.contagion__cards .card__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.contagion__cards .card__title {
+  font-size: 2rem;
+  line-height: 147%;
+}
+
+.contagion__cards .card__subtitle {
+  font-size: 1.125rem;
+  line-height: 185%;
 }
 
 .btn {
