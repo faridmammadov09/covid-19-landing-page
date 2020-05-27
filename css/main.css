@@ -382,6 +382,30 @@ h3 {
   color: #035755;
 }
 
+h1,
+h2 {
+  font-size: 3.125rem;
+  text-transform: capitalize;
+  line-height: 139%;
+  margin-bottom: 29px;
+}
+
+h1 div,
+h2 div {
+  font-size: 1.8125rem;
+  color: #fb4c47;
+}
+
+p {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  line-height: 190%;
+}
+
+section {
+  padding: 200px 0;
+}
+
 @font-face {
   font-family: "Red Hat Display";
   src: url("/fonts/RedHatDisplay/RedHatDisplay-Bold.woff2") format("woff2"), url("/fonts/RedHatDisplay/RedHatDisplay-Bold.woff") format("woff");
@@ -506,7 +530,6 @@ body {
 }
 
 .header {
-  height: 100vh;
   background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#fff8f8));
   background: linear-gradient(0deg, #fff, #fff8f8);
 }
@@ -582,20 +605,10 @@ body {
 
 .header .banner__title {
   font-size: 2rem;
-  text-transform: capitalize;
-  line-height: 139%;
-  margin-bottom: 29px;
-}
-
-.header .banner__title div {
-  font-size: 18px;
-  color: #fb4c47;
 }
 
 .header .banner p {
   font-size: 1.5rem;
-  text-transform: capitalize;
-  line-height: 190%;
   margin-bottom: 54px;
 }
 
@@ -604,23 +617,70 @@ body {
   color: #ffffff;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
+  -webkit-box-shadow: 0 0 10px rgba(251, 76, 71, 0.6);
+          box-shadow: 0 0 10px rgba(251, 76, 71, 0.6);
 }
 
 .header .banner__btn-cta:hover {
-  -webkit-box-shadow: 0 8px 87px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 8px 87px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 20px rgba(251, 76, 71, 0.8);
+          box-shadow: 0 0 20px rgba(251, 76, 71, 0.8);
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
+}
+
+.about-us {
+  background-image: url("/images/about-us-bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.about-us .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-us__image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.about-us__image img {
+  width: 100%;
+}
+
+.about-us__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.about-us__text {
+  line-height: 215%;
+  margin-top: 18px;
+  margin-bottom: 56px;
+}
+
+.about-us__btn {
+  background-color: rgba(250, 86, 82, 0.15);
+  border: 2px solid transparent;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.about-us__btn:hover {
+  border: 2px solid #fb4c47;
 }
 
 .btn {
   display: inline-block;
   padding: 0.8rem 2.76rem;
   border-radius: 1000px;
-  background-color: transparent;
   font-weight: bold;
-  -webkit-box-shadow: 0 8px 87px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 8px 87px rgba(0, 0, 0, 0.1);
 }
 
 .btn--outline {
@@ -635,6 +695,10 @@ body {
 }
 
 .btn--lg {
+  padding: 1.25rem 3.5rem;
+}
+
+.btn--xl {
   font-size: 1.5rem;
   padding: 1.6875rem 4.3rem;
 }

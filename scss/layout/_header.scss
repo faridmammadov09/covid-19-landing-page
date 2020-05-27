@@ -3,7 +3,6 @@
 // -----------------------------------------------------------------------------
 
 .header {
-  height: 100vh;
   background: linear-gradient(0deg, #fff, #fff8f8);
 
   .nav {
@@ -57,19 +56,10 @@
 
     &__title {
       font-size: 2rem;
-      text-transform: capitalize;
-      line-height: 139%;
-      margin-bottom: 29px;
-      div {
-        font-size: 18px;
-        color: $primary-color;
-      }
     }
 
     p {
       font-size: 1.5rem;
-      text-transform: capitalize;
-      line-height: 190%;
       margin-bottom: 54px;
     }
 
@@ -77,9 +67,10 @@
       background-color: $primary-color;
       color: #ffffff;
       transition: all 200ms ease;
+      box-shadow: 0 0 10px rgba($color: $primary-color, $alpha: 0.6);
 
       &:hover {
-        box-shadow: 0 8px 87px rgba($color: #000000, $alpha: 0.3);
+        box-shadow: 0 0 20px rgba($color: $primary-color, $alpha: 0.8);
         transform: translateY(-3px);
       }
     }

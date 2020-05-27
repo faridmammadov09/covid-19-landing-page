@@ -44,3 +44,25 @@ h3 {
   font-family: $heading-font-stack;
   color: $secondary-color;
 }
+
+h1,
+h2 {
+  font-size: 3.125rem;
+  text-transform: capitalize;
+  line-height: 139%;
+  margin-bottom: 29px;
+  div {
+    font-size: 1.8125rem;
+    color: $primary-color;
+  }
+}
+
+p {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  line-height: 190%;
+}
+
+section {
+  padding: 200px 0;
+}
