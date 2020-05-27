@@ -1,0 +1,69 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+// Red Hat Display
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("/fonts/RedHatDisplay/RedHatDisplay-Bold.woff2") format("woff2"),
+    url("/fonts/RedHatDisplay/RedHatDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("/fonts/RedHatDisplay/RedHatDisplay-Medium.woff2") format("woff2"),
+    url("/fonts/RedHatDisplay/RedHatDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("/fonts/RedHatDisplay/RedHatDisplay-Regular.woff2") format("woff2"),
+    url("/fonts/RedHatDisplay/RedHatDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Gelion
+@font-face {
+  font-family: "Gelion";
+  src: url("/fonts/Gelion/Gelion-Light.woff2") format("woff2"),
+    url("/fonts/Gelion/Gelion-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gelion";
+  src: url("/fonts/Gelion/Gelion-Bold.woff2") format("woff2"),
+    url("/fonts/Gelion/Gelion-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gelion";
+  src: url("/fonts/Gelion/Gelion-Regular.woff2") format("woff2"),
+    url("/fonts/Gelion/Gelion-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gelion";
+  src: url("/fonts/Gelion/Gelion-Thin.woff2") format("woff2"),
+    url("/fonts/Gelion/Gelion-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gelion";
+  src: url("/fonts/Gelion/Gelion-Medium.woff2") format("woff2"),
+    url("/fonts/Gelion/Gelion-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}

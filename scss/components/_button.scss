@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+  //   height: 55px;
+  //   width: 154px;
+  display: inline-block;
+  padding: 0.8rem 2.76rem;
+  border-radius: 1000px;
+
+  background-color: transparent;
+  font-weight: bold;
+  box-shadow: 0 8px 87px rgba($color: #000000, $alpha: 0.1);
+
+  &--outline {
+    border: 2px solid $primary-color;
+    transition: all 200ms ease;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #ffffff;
+    }
+  }
+
+  &--lg {
+    font-size: 1.5rem;
+    padding: 1.6875rem 4.3rem;
+  }
+}
