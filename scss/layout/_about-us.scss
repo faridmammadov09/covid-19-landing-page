@@ -1,11 +1,12 @@
 .about-us {
   background-image: url("/images/about-us-bg.svg");
   background-repeat: no-repeat;
-  background-position: bottom right;
   background-size: 80px;
+  background-position: right 80%;
 
   @include breakpoint(medium) {
     background-size: initial;
+    background-position: bottom right;
   }
   .container {
     display: flex;

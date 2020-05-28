@@ -23,3 +23,12 @@ cards.forEach((card) => {
     card.classList.add("card--active");
   });
 });
+
+$(window).on("scroll", function () {
+  scroll_pos = $(window).scrollTop() + $(window).height();
+  element_pos =
+    $(".symptoms__image").offset().top + $(".symptoms__image").height() - 100;
+  if (scroll_pos > element_pos) {
+    $(".sym-path").addClass("sym-path--active");
+  }
+});

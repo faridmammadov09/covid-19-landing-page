@@ -1,0 +1,33 @@
+.symptoms {
+  background-image: url(/images/symptoms-path-1.svg),
+    url(/images/symptoms-path-2.svg);
+  background-position: 20% 40%, 98% 95%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 60px, 120px;
+
+  @include breakpoint(large) {
+    background-size: 120px, 220px;
+    background-position: 10% 70%, 98% 90%;
+  }
+  &__image {
+    svg {
+      height: 500px;
+      width: 100%;
+    }
+
+    .sym-path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+
+      &--active {
+        animation: dash 5s linear forwards;
+      }
+
+      @keyframes dash {
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+    }
+  }
+}
