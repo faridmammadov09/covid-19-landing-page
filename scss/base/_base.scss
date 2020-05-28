@@ -21,6 +21,11 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 /**
  * Basic styles for links
  */
@@ -66,7 +71,7 @@ p {
 }
 
 section {
-  padding: 180px 0;
+  padding: 50px 0;
 
   @include breakpoint(medium) {
     padding: 100px 0 200px;
@@ -77,35 +82,32 @@ section {
   }
 
   .section-title {
-    font-size: 3.125rem;
+    font-size: 2rem;
     line-height: 119%;
-    margin-bottom: 31px;
+    margin-bottom: 20px;
+    @include breakpoint(medium) {
+      font-size: 3.125rem;
+      margin-bottom: 31px;
+    }
 
     div {
-      font-size: 1.8125rem;
+      font-size: 1rem;
       line-height: 124%;
+
+      @include breakpoint(medium) {
+        font-size: 1.8125rem;
+      }
     }
   }
 
   .section-subtitle {
-    font-size: 1.125rem;
-    line-height: 215%;
+    font-size: 0.875rem;
     max-width: 570px;
     margin: 0 auto;
-  }
-}
+    line-height: 215%;
 
-.white-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  z-index: 10;
-
-  &.active {
-    display: block;
+    @include breakpoint(medium) {
+      font-size: 1.125rem;
+    }
   }
 }
