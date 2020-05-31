@@ -1,0 +1,116 @@
+.prevention {
+  background-image: url("/images/coronavirus-green.svg"),
+    url("/images/coronavirus-green-red.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 40px, 70px;
+  background-position: left 10%, right 95%;
+
+  @include breakpoint(medium) {
+    background-size: 80px, 140px;
+    background-position: left 15%, right 94%;
+  }
+
+  &__content {
+    display: grid;
+    row-gap: 20px;
+    align-items: center;
+
+    img {
+      max-height: 300px;
+      width: 100%;
+
+      @include breakpoint(medium) {
+        max-height: 400px;
+      }
+    }
+
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      column-gap: 100px;
+      grid-template-areas: "col-2 col-1" "col-3 col-4" "col-6 col-5" "col-7 col-8";
+
+      & > div:first-child {
+        grid-area: col-1;
+      }
+
+      & > div:nth-child(3) {
+        grid-area: col-3;
+      }
+
+      & > div:nth-child(4) {
+        grid-area: col-4;
+      }
+
+      & > div:nth-child(5) {
+        grid-area: col-5;
+      }
+
+      & > div:nth-child(6) {
+        grid-area: col-6;
+      }
+
+      & > div:nth-child(7) {
+        grid-area: col-7;
+      }
+
+      & > div:last-child {
+        grid-area: col-8;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 32px;
+    line-height: 147%;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+
+    @include breakpoint(medium) {
+      font-size: 2.9375rem;
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      content: counter(title, decimal-leading-zero);
+      counter-increment: title;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $light-red;
+      height: 50px;
+      min-width: 50px;
+      border-radius: 50%;
+
+      font-family: $heading-font-stack;
+      font-size: 1.125rem;
+      color: $primary-color;
+      margin-right: 10px;
+
+      @include breakpoint(medium) {
+        position: absolute;
+        left: -80px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 75px;
+        min-width: 75px;
+        left: -100px;
+        font-size: 2.25rem;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-text {
+    font-size: 1rem;
+    line-height: 221%;
+
+    @include breakpoint(medium) {
+      font-size: 1.125rem;
+    }
+  }
+}

@@ -11,7 +11,7 @@
 
 // 4. Layout-related sections
 @import "layout/header", "layout/about-us", "layout/contagion",
-  "layout/symptoms", "layout/footer";
+  "layout/symptoms", "./layout/prevention", "layout/footer";
 
 // 5. Components
 @import "components/button";
