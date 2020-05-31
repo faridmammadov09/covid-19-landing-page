@@ -12,6 +12,7 @@ hamburgerMenu.addEventListener("click", () => {
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
     menuOverlay.classList.remove("small");
+    hamburgerMenu.classList.remove("active");
   });
 });
 
