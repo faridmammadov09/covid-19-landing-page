@@ -757,6 +757,9 @@ body {
 }
 
 .header .nav .hamburger-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 10px;
   height: 45px;
   width: 45px;
@@ -774,6 +777,18 @@ body {
   .header .nav .hamburger-menu {
     display: none;
   }
+}
+
+.header .nav .hamburger-menu .menu-exit {
+  display: none;
+}
+
+.header .nav .hamburger-menu.active .menu-bars {
+  display: none;
+}
+
+.header .nav .hamburger-menu.active .menu-exit {
+  display: inline-block;
 }
 
 .header .banner {
@@ -1154,7 +1169,7 @@ body {
 @media screen and (min-width: 768px) {
   .prevention {
     background-size: 80px, 140px;
-    background-position: left 15%, right 94%;
+    background-position: left 10%, right 94%;
   }
 }
 

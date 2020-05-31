@@ -114,6 +114,7 @@
     }
 
     .hamburger-menu {
+      display: flex;
       padding: 10px;
       height: 45px;
       width: 45px;
@@ -127,6 +128,18 @@
 
       @include breakpoint(medium) {
         display: none;
+      }
+
+      .menu-exit {
+        display: none;
+      }
+
+      &.active .menu-bars {
+        display: none;
+      }
+
+      &.active .menu-exit {
+        display: inline-block;
       }
     }
   }

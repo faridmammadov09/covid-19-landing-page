@@ -6,6 +6,7 @@ const cards = document.querySelectorAll(".card");
 
 hamburgerMenu.addEventListener("click", () => {
   menuOverlay.classList.toggle("small");
+  hamburgerMenu.classList.toggle("active");
 });
 
 menuItems.forEach((item) => {
