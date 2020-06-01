@@ -1478,6 +1478,104 @@ body {
   margin-right: 10px;
 }
 
+.subscribe {
+  text-align: center;
+  background-image: url(/images/subscribe-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 120px;
+  background-position: top right;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe {
+    background-size: initial;
+    background-position: bottom right;
+  }
+}
+
+.subscribe h2 {
+  font-size: 1.6rem;
+}
+
+.subscribe h2 div {
+  color: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe h2 {
+    font-size: 3rem;
+  }
+}
+
+.subscribe .subscribe-form {
+  height: auto;
+  width: 100%;
+  max-width: 790px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe .subscribe-form {
+    height: 114px;
+  }
+}
+
+.subscribe .subscribe-form input[type="email"] {
+  height: 100%;
+  width: 100%;
+  border-radius: 1000px;
+  border: none;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  outline: none;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe .subscribe-form input[type="email"] {
+    padding: 40px 250px 40px 40px;
+    margin-bottom: 0;
+    font-size: 1.375rem;
+  }
+}
+
+.subscribe .subscribe-form input[type="submit"] {
+  height: 68px;
+  width: 100%;
+  background-color: #fb4c47;
+  border-radius: 1000px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  position: static;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe .subscribe-form input[type="submit"] {
+    height: 78px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 20px;
+    width: 209px;
+    font-size: 1.375rem;
+  }
+}
+
+.subscribe .subscribe-form input[type="submit"]:hover {
+  background-color: #035755;
+}
+
 .btn {
   display: block;
   padding: 0.8rem 2.76rem;
