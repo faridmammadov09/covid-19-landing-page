@@ -90,6 +90,7 @@
         margin-bottom: 10px;
         padding: 10px;
         border-radius: 5px;
+        transition: background-color 200ms ease;
 
         &:hover {
           background-color: #dee1ed;
