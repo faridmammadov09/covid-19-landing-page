@@ -1,0 +1,122 @@
+.stats {
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+  }
+  .map-panel {
+    flex: 2;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .live-reports {
+    padding: 20px;
+    background: linear-gradient(#fffbfb, #fdfdfd);
+    box-shadow: 0 0 50px rgba($color: #000000, $alpha: 0.1);
+    min-width: 100%;
+    margin-top: 30px;
+
+    @include breakpoint(large) {
+      padding: 50px;
+      margin-left: 100px;
+      min-width: 500px;
+      margin-top: 0;
+    }
+
+    &__header {
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        @include breakpoint(medium) {
+          font-size: 2.5rem;
+        }
+      }
+
+      .btn-wrapper {
+        height: 50px;
+        min-width: 86px;
+        background: #fff;
+        display: flex;
+        box-shadow: 0 3px 5px rgba($color: #000000, $alpha: 0.1);
+        border-radius: 6px;
+        overflow: hidden;
+
+        .btn-left,
+        .btn-right {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #dee1ed;
+          }
+        }
+
+        .btn-left {
+          min-width: 43px;
+        }
+
+        .btn-right {
+          min-width: 43px;
+        }
+      }
+    }
+
+    &__countries {
+      color: $secondary-color;
+      font-weight: bold;
+      ul {
+        margin: 0;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: #dee1ed;
+        }
+      }
+
+      .country-flag {
+        height: 35px;
+        min-width: 49px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .country-name {
+        margin-left: 30px;
+        margin-right: auto;
+      }
+
+      .stats-wrapper {
+        display: flex;
+
+        .country-cases {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
