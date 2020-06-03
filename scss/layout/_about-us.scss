@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: center;
 
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       flex-direction: row;
     }
   }

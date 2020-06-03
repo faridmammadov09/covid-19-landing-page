@@ -686,7 +686,7 @@ body {
   display: flex;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .header .nav .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -717,7 +717,7 @@ body {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .header .nav .menu__list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -730,7 +730,7 @@ body {
   margin-right: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .header .nav .menu__item {
     margin-right: 50px;
   }
@@ -743,7 +743,7 @@ body {
   transition: color 200ms ease;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .header .nav .menu__link {
     font-size: 1.125rem;
   }
@@ -774,7 +774,7 @@ body {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .header .nav .hamburger-menu {
     display: none;
   }
@@ -848,7 +848,7 @@ body {
   font-size: 1.4rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .header .banner__title {
     font-size: 2rem;
   }
@@ -858,7 +858,7 @@ body {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .header .banner p {
     margin-bottom: 54px;
   }
@@ -907,7 +907,7 @@ body {
           align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .about-us .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -996,7 +996,7 @@ body {
           justify-content: space-between;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .contagion__cards {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1071,7 +1071,7 @@ body {
   border-bottom: 6px solid #fb4c47;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .contagion__cards .card {
     height: 575px;
     margin-bottom: 0;
@@ -1256,7 +1256,7 @@ body {
   margin-top: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .prevention-title {
     font-size: 2.9375rem;
     margin-bottom: 20px;
@@ -1285,7 +1285,7 @@ body {
   margin-right: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .prevention-title:before {
     position: absolute;
     left: -80px;
@@ -1305,7 +1305,7 @@ body {
   line-height: 221%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .prevention-text {
     font-size: 1.125rem;
   }
@@ -1324,7 +1324,7 @@ body {
           flex-direction: column;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .stats .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1350,10 +1350,10 @@ body {
   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
   min-width: 100%;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .stats .live-reports {
     padding: 50px;
     margin-left: 100px;

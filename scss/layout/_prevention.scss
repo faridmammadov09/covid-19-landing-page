@@ -70,7 +70,7 @@
     align-items: center;
     margin-top: 0;
 
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       font-size: 2.9375rem;
       margin-bottom: 20px;
     }
@@ -91,7 +91,7 @@
       color: $primary-color;
       margin-right: 10px;
 
-      @include breakpoint(medium) {
+      @include breakpoint(xlarge) {
         position: absolute;
         left: -80px;
         top: 50%;
@@ -109,7 +109,7 @@
     font-size: 1rem;
     line-height: 221%;
 
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       font-size: 1.125rem;
     }
   }
