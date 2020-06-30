@@ -34,3 +34,19 @@ $(window).on("scroll", function () {
     $(".sym-path").addClass("sym-path--active");
   }
 });
+
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", function (event) {
+  event.preventDefault();
+
+  if (window.scrollY >= 100) {
+    nav.classList.add("nav--scrolled");
+  } else {
+    nav.classList.remove("nav--scrolled");
+  }
+});
+
+AOS.init({
+  duration: 600,
+});

@@ -32,7 +32,7 @@
 
       &:first-child::before {
         content: "";
-        background-image: url("/images/coronavirus.svg");
+        background-image: url("../images/coronavirus.svg");
         background-size: cover;
         height: 100px;
         width: 100px;

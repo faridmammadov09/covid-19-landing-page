@@ -4,8 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covid 19 - Landing Page</title>
-    <link rel="stylesheet" href="./css/main.css" />
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+    <!-- AOS CSS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -58,7 +76,10 @@
               disease (COVID-19). People may need supportive care to .
             </p>
 
-            <a href="javascript:void(0)" class="btn btn--xl banner__btn-cta"
+            <a
+              href="https://covid19.who.int/"
+              class="btn btn--xl banner__btn-cta"
+              target="_blank"
               >Let Us Help</a
             >
           </div>
@@ -74,7 +95,7 @@
         <div class="about-us__image">
           <img src="images/about-us-illustration.svg" alt="" />
         </div>
-        <div class="about-us__content">
+        <div class="about-us__content" data-aos="fade-up">
           <h2 class="about-us__title">
             <div>What Is Covid-19</div>
             Coronavirus
@@ -86,7 +107,10 @@
             M.S., the director of operations with the Johns Hopkins Office of
             Critical Event Preparedness and Response
           </p>
-          <a href="javascript:void(0)" class="btn about-us__btn btn--lg"
+          <a
+            href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019"
+            class="btn about-us__btn btn--lg"
+            target="_blank"
             >Learn More</a
           >
         </div>
@@ -105,7 +129,7 @@
             and some cause disease. A newly identified type
           </p>
         </div>
-        <div class="contagion__cards">
+        <div class="contagion__cards" data-aos="fade-up">
           <div class="card card--active">
             <div class="card__image">
               <img src="images/air-transmission.svg" alt="" />
@@ -711,7 +735,7 @@
           <div>
             <img src="images/prevention-1.svg" alt="" />
           </div>
-          <div>
+          <div data-aos="fade-right">
             <h3 class="prevention-title">
               wear masks
             </h3>
@@ -726,7 +750,7 @@
           <div>
             <img src="images/prevention-2.svg" alt="" />
           </div>
-          <div>
+          <div data-aos="fade-left">
             <h3 class="prevention-title">
               Wash Your Hands
             </h3>
@@ -742,7 +766,7 @@
           <div>
             <img src="images/prevention-3.svg" alt="" />
           </div>
-          <div>
+          <div data-aos="fade-right">
             <h3 class="prevention-title">
               Use nose - rag
             </h3>
@@ -757,7 +781,7 @@
           <div>
             <img src="images/prevention-4.svg" alt="" />
           </div>
-          <div>
+          <div data-aos="fade-left">
             <h3 class="prevention-title">
               Avoid contacts
             </h3>
@@ -1010,12 +1034,5 @@
         2020 @ All rights reserved by pixelspark.co
       </div>
     </footer>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/main.js"></script>
   </body>
 </html>

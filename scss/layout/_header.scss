@@ -22,10 +22,29 @@
     align-items: center;
     justify-content: space-between;
     z-index: 5;
+    transition: all 200ms ease;
+
+    &--scrolled {
+      background-color: #fee6e5;
+    }
 
     @include breakpoint(medium) {
       height: 130px;
       padding: 20px;
+
+      &--scrolled {
+        background-color: #fee6e5;
+        height: 50px;
+        padding: 30px;
+
+        .logo-wrapper {
+          max-width: 60px;
+        }
+
+        .btn-contact {
+          padding: 0.2rem 1.5rem;
+        }
+      }
     }
 
     .logo-wrapper {
@@ -193,10 +212,9 @@
       background-color: $primary-color;
       color: #ffffff;
       transition: all 200ms ease;
-      box-shadow: 0 0 10px rgba($color: $primary-color, $alpha: 0.6);
 
       &:hover {
-        box-shadow: 0 0 20px rgba($color: $primary-color, $alpha: 0.8);
+        box-shadow: 0 0 0 8px rgba($color: $primary-color, $alpha: 0.4);
         transform: translateY(-3px);
       }
     }

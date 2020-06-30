@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  user-select: none;
+  overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   counter-reset: title;
 }
@@ -75,6 +75,7 @@ p {
 
 section {
   padding: 50px 0;
+  overflow: hidden;
 
   @include breakpoint(medium) {
     padding: 100px 0 200px;

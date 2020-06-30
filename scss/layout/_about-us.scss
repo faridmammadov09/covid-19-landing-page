@@ -1,5 +1,5 @@
 .about-us {
-  background-image: url("/images/about-us-bg.svg");
+  background-image: url("../images/about-us-bg.svg");
   background-repeat: no-repeat;
   background-size: 80px;
   background-position: right 80%;
@@ -64,7 +64,8 @@
     transition: all 200ms ease;
 
     &:hover {
-      border: 2px solid $primary-color;
+      // border: 2px solid $primary-color;
+      box-shadow: 0 0 0 4px rgba($color: $primary-color, $alpha: 0.3);
     }
   }
 }

@@ -364,10 +364,7 @@ html {
 }
 
 body {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   counter-reset: title;
 }
@@ -419,6 +416,7 @@ p {
 
 section {
   padding: 50px 0;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -477,56 +475,56 @@ section .section-subtitle {
 
 @font-face {
   font-family: "Red Hat Display";
-  src: url("/fonts/RedHatDisplay/RedHatDisplay-Bold.woff2") format("woff2"), url("/fonts/RedHatDisplay/RedHatDisplay-Bold.woff") format("woff");
+  src: url("../fonts/RedHatDisplay/RedHatDisplay-Bold.woff2") format("woff2"), url("../fonts/RedHatDisplay/RedHatDisplay-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Red Hat Display";
-  src: url("/fonts/RedHatDisplay/RedHatDisplay-Medium.woff2") format("woff2"), url("/fonts/RedHatDisplay/RedHatDisplay-Medium.woff") format("woff");
+  src: url("../fonts/RedHatDisplay/RedHatDisplay-Medium.woff2") format("woff2"), url("../fonts/RedHatDisplay/RedHatDisplay-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Red Hat Display";
-  src: url("/fonts/RedHatDisplay/RedHatDisplay-Regular.woff2") format("woff2"), url("/fonts/RedHatDisplay/RedHatDisplay-Regular.woff") format("woff");
+  src: url("../fonts/RedHatDisplay/RedHatDisplay-Regular.woff2") format("woff2"), url("../fonts/RedHatDisplay/RedHatDisplay-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gelion";
-  src: url("/fonts/Gelion/Gelion-Light.woff2") format("woff2"), url("/fonts/Gelion/Gelion-Light.woff") format("woff");
+  src: url("../fonts/Gelion/Gelion-Light.woff2") format("woff2"), url("../fonts/Gelion/Gelion-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gelion";
-  src: url("/fonts/Gelion/Gelion-Bold.woff2") format("woff2"), url("/fonts/Gelion/Gelion-Bold.woff") format("woff");
+  src: url("../fonts/Gelion/Gelion-Bold.woff2") format("woff2"), url("../fonts/Gelion/Gelion-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gelion";
-  src: url("/fonts/Gelion/Gelion-Regular.woff2") format("woff2"), url("/fonts/Gelion/Gelion-Regular.woff") format("woff");
+  src: url("../fonts/Gelion/Gelion-Regular.woff2") format("woff2"), url("../fonts/Gelion/Gelion-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gelion";
-  src: url("/fonts/Gelion/Gelion-Thin.woff2") format("woff2"), url("/fonts/Gelion/Gelion-Thin.woff") format("woff");
+  src: url("../fonts/Gelion/Gelion-Thin.woff2") format("woff2"), url("../fonts/Gelion/Gelion-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gelion";
-  src: url("/fonts/Gelion/Gelion-Medium.woff2") format("woff2"), url("/fonts/Gelion/Gelion-Medium.woff") format("woff");
+  src: url("../fonts/Gelion/Gelion-Medium.woff2") format("woff2"), url("../fonts/Gelion/Gelion-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -629,12 +627,29 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 5;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.header .nav--scrolled {
+  background-color: #fee6e5;
 }
 
 @media screen and (min-width: 768px) {
   .header .nav {
     height: 130px;
     padding: 20px;
+  }
+  .header .nav--scrolled {
+    background-color: #fee6e5;
+    height: 50px;
+    padding: 30px;
+  }
+  .header .nav--scrolled .logo-wrapper {
+    max-width: 60px;
+  }
+  .header .nav--scrolled .btn-contact {
+    padding: 0.2rem 1.5rem;
   }
 }
 
@@ -869,19 +884,17 @@ body {
   color: #ffffff;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
-  -webkit-box-shadow: 0 0 10px rgba(251, 76, 71, 0.6);
-          box-shadow: 0 0 10px rgba(251, 76, 71, 0.6);
 }
 
 .header .banner__btn-cta:hover {
-  -webkit-box-shadow: 0 0 20px rgba(251, 76, 71, 0.8);
-          box-shadow: 0 0 20px rgba(251, 76, 71, 0.8);
+  -webkit-box-shadow: 0 0 0 8px rgba(251, 76, 71, 0.4);
+          box-shadow: 0 0 0 8px rgba(251, 76, 71, 0.4);
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
 }
 
 .about-us {
-  background-image: url("/images/about-us-bg.svg");
+  background-image: url("../images/about-us-bg.svg");
   background-repeat: no-repeat;
   background-size: 80px;
   background-position: right 80%;
@@ -977,7 +990,8 @@ body {
 }
 
 .about-us__btn:hover {
-  border: 2px solid #fb4c47;
+  -webkit-box-shadow: 0 0 0 4px rgba(251, 76, 71, 0.3);
+          box-shadow: 0 0 0 4px rgba(251, 76, 71, 0.3);
 }
 
 .contagion__cards {
@@ -1042,7 +1056,7 @@ body {
 
 .contagion__cards .card:first-child::before {
   content: "";
-  background-image: url("/images/coronavirus.svg");
+  background-image: url("../images/coronavirus.svg");
   background-size: cover;
   height: 100px;
   width: 100px;
@@ -1120,7 +1134,7 @@ body {
 }
 
 .symptoms {
-  background-image: url(/images/symptoms-path-1.svg), url(/images/symptoms-path-2.svg);
+  background-image: url(../images/symptoms-path-1.svg), url(../images/symptoms-path-2.svg);
   background-position: 20% 40%, 98% 95%;
   background-repeat: no-repeat, no-repeat;
   background-size: 60px, 120px;
@@ -1161,7 +1175,7 @@ body {
 }
 
 .prevention {
-  background-image: url("/images/coronavirus-green.svg"), url("/images/coronavirus-green-red.svg");
+  background-image: url("../images/coronavirus-green.svg"), url("../images/coronavirus-green-red.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: 40px, 70px;
   background-position: left 10%, right 95%;
@@ -1480,7 +1494,7 @@ body {
 
 .subscribe {
   text-align: center;
-  background-image: url(/images/subscribe-bg.svg);
+  background-image: url(../images/subscribe-bg.svg);
   background-repeat: no-repeat;
   background-size: 120px;
   background-position: top right;
